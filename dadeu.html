@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Linking CSS-->
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Google fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;900&display=swap" rel="stylesheet">
+
+    <title>DaDeu</title>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="grid-container">
+
+            <!--Section 1, incluye grid1 y grid 2-->
+
+
+            <section class="show-case">
+
+
+                <!--titulo, grid uno-->
+
+                <div class="grid-uno">
+
+                    <h1 class="title">DaDeu</h1>
+
+                    <h2 class="second-title">Calcula tu capacidad de endeudamiento!</h2>
+
+                    <p class="text-1">Quieres pedir un prestamo, credito a libre inversion,<br> pero ¿No sabes si lo podras pagar?</p>
+
+                </div>
+                <!-- Forma, que contiene grid-2 y buton-->
+            </section>
+
+            <div class="grid-dos">
+
+
+
+                <section class="input-info">
+
+                    <form name="Form" onsubmit="return validateForm()" action="">
+
+                        <div class="inputA">
+                            <label for="inputSalary"><h3>Ingresos</h3>
+                            <input type="number" id="inputSalary" name="input1" placeholder="0 $">
+                        </label>
+                        </div>
+
+                        <div class="inputB">
+                            <label for="inputSpends"><h3>gastos</h3>
+                                <input type="number" id="inputSpends" name="input2" placeholder="0 $">
+                            </label>
+                        </div>
+
+                        <div class="inputC">
+
+                            <label for="inputDebt"><h3>Deuda</h3>
+                            <input type="number" id="inputDebt" name="input3" placeholder="0 $">
+                        </label>
+                        </div>
+                    </form>
+                    <div class="btns">
+
+                        <button type="button" onclick="calcularCapacidad()" class="calcular-btn">¡Calcular!</button>
+
+                        <button type="button" onclick="reset()" class="reset-btn">Reset</button>
+
+                    </div>
+
+
+                </section>
+
+
+                <div class="text-2">
+                    <p class="text-dos">Ingresa en el siguiente formulario tus salario por mes en total, gastos mensuales, actual deuda(si tienes). <br><br> Con toda esta informacion sabaras cual es tu capacidad de endeudamiento, y si deberias pedir un credito o no basado
+                        en tu capacidad e indice de endeudamiento. </p>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- grid 3, donde se mostrara uno de los resultados-->
+
+
+            <div class="grid-tres">
+
+                <div class="show-results">
+
+                    <h3 class="result-title">Tu capacidad de endeudamiento es:</h3>
+
+                    <div class="money">
+                        <p class="result">0 </p><span> $</span></div>
+
+                </div>
+
+            </div>
+
+
+            <!--grid 4, donde se muestra la ultima respuesta-->
+
+            <div class="grid-cuatro">
+
+                <div class="second-result">
+                    <h3 class="indice-title">Indice de deuda:</h3>
+
+                    <p class="indiceDeuda"></p>
+
+                </div>
+
+                <div class="last-text">
+                    <p class="text-final">Si tienes un buen indice de endeudamiento, siente seguro de pedir un credito. <br> <br> Al contrario, si no tienes un buen indice de capacidad, pedir un credito puede ser <br> perjudicial para tu economia. </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+    </main>
+
+    <!---footer-->
+
+    <footer>
+
+        <div class="footer">
+
+            <div class="footer">
+                <div class="contain">
+                    <div class="col">
+                        <h1>Company</h1>
+                        <ul>
+
+                            <li>Services</li>
+                            <li>Social</li>
+                            <li>Get in touch</li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <h1>Accounts</h1>
+                        <ul>
+
+                            <li>Services</li>
+                            <li>Social</li>
+                            <li>Get in touch</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h1>Resources</h1>
+                        <ul>
+                            <li>Webmail</li>
+                            <li>Redeem code</li>
+                            <li>WHOIS lookup</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h1>Support</h1>
+                        <ul>
+                            <li>Contact us</li>
+                            <li>Web chat</li>
+                            <li>Open ticket</li>
+                        </ul>
+                    </div>
+                    <div class="col social">
+                        <h1>Social</h1>
+                        <ul>
+                            <li><img src="https://www.logo.wine/a/logo/Facebook/Facebook-f_Logo-Blue-Logo.wine.svg" width="32" style="width: 32px;"></li>
+                            <li><img src="https://www.logo.wine/a/logo/Instagram/Instagram-Logo.wine.svg" width="32" style="width: 32px;"></li>
+                            <li><img src="https://www.logo.wine/a/logo/TikTok/TikTok-Logo.wine.svg" width="32" style="width: 32px;"></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="copyright">
+            <h3>DaDeu: &copy;</h3>
+        </div>
+
+    </footer>
+
+
+
+    <!--Adding the JavaScript-->
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
